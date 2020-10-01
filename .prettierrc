@@ -1,0 +1,27 @@
+{
+  "useTabs": false,
+  "printWidth": 80,
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": true,
+  "parser": "flow",
+  "semi": false,
+  "bracketSpacing": false,
+  "overrides": [
+    {
+      "files": "*.less",
+      "options": {
+        "parser": "css",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}
