@@ -31,7 +31,7 @@ const Task: FC<TaskProps> = ({
                     value={title}
                     placeholder={'Input title'}
                     readOnly
-                    style={{backgroundColor: 'red'}}
+                    style={{textOverflow: 'ellipsis'}}
                 />
             </div>
 
