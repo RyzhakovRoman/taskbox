@@ -1,7 +1,10 @@
 {
-  "name": "storybook",
+  "name": "rr-storybook",
+  "description": "learn storybook design system",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/RyzhakovRoman/taskbox",
+  "main": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -26,7 +29,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token phasqn0i2b"
+    "chromatic": "npx chromatic --project-token phasqn0i2b",
+    "build-ds": "cross-env BABEL_ENV=production babel --extensions \".ts,.tsx\" src -d dist",
+    "build-types": "tsc --emitDeclarationOnly"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,7 +49,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
+    "@babel/preset-typescript": "^7.10.4",
     "@storybook/addon-actions": "^6.0.22",
     "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-links": "^6.0.22",
@@ -54,8 +61,25 @@
     "@storybook/react": "^6.0.22",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.2.0",
+    "cross-env": "^7.0.2",
     "prettier": "^2.1.2",
     "react-is": "^16.13.1",
     "react-test-renderer": "^16.13.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ],
+      [
+        "@babel/preset-env",
+        {
+          "targets": ">0.2%, not dead, not op_mini all"
+        }
+      ]
+    ]
   }
 }
