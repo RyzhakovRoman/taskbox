@@ -2,11 +2,9 @@ import React from 'react'
 import {FC} from 'react'
 
 const Input: FC<InputProps> = () => {
-    return <input/>
+    return <input />
 }
 
-interface InputProps {
-
-}
+interface InputProps {}
 
 export default Input

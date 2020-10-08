@@ -30,7 +30,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token phasqn0i2b",
-    "build-ds": "cross-env BABEL_ENV=production babel --source-maps --extensions \".ts,.tsx\" src -d dist",
+    "build-ds": "cross-env BABEL_ENV=production babel --extensions \".ts,.tsx\" src -d dist",
     "build-types": "tsc --emitDeclarationOnly"
   },
   "eslintConfig": {
@@ -71,13 +71,15 @@
       [
         "react-app",
         {
-          "absoluteRuntime": false,
-          "module": "js"
+          "absoluteRuntime": false
         }
-      ],[
-      "@babel/preset-typescript", {
-          "allowDeclareFields": true
-        }]
+      ],
+      [
+        "@babel/preset-env",
+        {
+          "targets": ">0.2%, not dead, not op_mini all"
+        }
+      ]
     ]
   }
 }

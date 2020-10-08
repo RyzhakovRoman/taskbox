@@ -1,6 +1,6 @@
-import { FC } from 'react';
-declare const Button: FC<ButtonProps>;
+import {FC} from 'react'
+declare const Button: FC<ButtonProps>
 interface ButtonProps {
-    text: string;
+    text: string
 }
-export default Button;
+export default Button

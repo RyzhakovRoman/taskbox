@@ -5,7 +5,7 @@
 
 // export { styles, global, animation, icons };
 
-export * from './components/Task';
-export * from './components/TaskList';
-export * from './stories/Button';
-export * from './stories/Header';
+export * from './components/Task'
+export * from './components/TaskList'
+export * from './stories/Button'
+export * from './stories/Header'
